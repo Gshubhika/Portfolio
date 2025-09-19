@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
-
+import photo from './assets/profile.jpg';
+import resume from './assets/resume.pdf';
 const PortfolioWebsite = () => {
   const [activeSection, setActiveSection] = useState('home');
 
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "src/assets/shubhika gupta resume.pdf";
+    link.href = {resume};
     link.download = "Shubhika Gupta Resume.pdf";
     link.click();
   };
@@ -126,7 +127,7 @@ const PortfolioWebsite = () => {
                 <div className="relative bg-gray-800 rounded-3xl p-3 transform -rotate-1 hover:rotate-0 transition-transform duration-500">
                   <div className="w-72 h-96 bg-gray-600 rounded-2xl flex items-center justify-center overflow-hidden">
                     <div className="w-full h-full bg-gradient-to-br from-gray-400 to-gray-600 flex items-center justify-center">
-                      <img src="src/assets/profile.jpg" alt="" />
+                      <img src={photo} alt="" />
                     </div>
                   </div>
                 </div>
@@ -367,12 +368,12 @@ const PortfolioWebsite = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <button className="bg-gradient-to-r from-cyan-400 to-teal-400 text-gray-900 px-8 py-4 rounded-full font-semibold hover:shadow-lg hover:shadow-cyan-400/25 transform hover:scale-105 transition-all duration-300"
+            <button className="bg-gradient-to-r from-cyan-400 to-teal-400 text-gray-900 px-8 py-4 rounded-full font-semibold hover:shadow-lg hover:shadow-cyan-400/25 transform hover:scale-105 transition-all duration-300 sm: m-auto w-80"
                     onClick={() => window.open('mailto:shubhikagupta31@gmail.com?subject=Let\'s Collaborate!&body=Hi Shubhika,%0D%0A%0D%0AI found your portfolio and would love to discuss...', '_blank')}
             >
               Get In Touch
             </button>
-            <button onClick={handleDownload} className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300">
+            <button onClick={handleDownload} className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 sm: m-auto w-80">
               View Resume
             </button>
           </div>
