@@ -5,50 +5,61 @@ import { ArrowRight, BarChart3, TrendingUp, Sparkles } from 'lucide-react';
 
 const PROJECTS_DATA = [
   {
-    id: 'mindspace',
-    title: 'MindSpace',
-    category: 'UX/UI Design • Mobile App',
-    description: 'A mental health companion app designed to help college students build mindfulness routines and cope with academic stress.',
-    tags: ['Mobile UX', 'User Research', 'Mental Health'],
+    id: 'wishhive',
+    title: 'Wish Hive',
+    category: 'UX/UI Design • Web App',
+    description: 'Modern e-commerce design with intuitive navigation and streamlined checkout process to enhance user experience.',
+    tags: ['Web UX', 'User Research', 'E-Commerce'],
     colorClass: 'project-card-pink',
-    stickerText: 'Mindfulness',
-    rotation: '-1.5deg',
-    metrics: {
-      label: 'Engagement',
-      value: '+42% Daily Active Users',
-      detail: 'Measured over a 3-month pilot study.'
-    }
+    stickerText: 'Shoping',
+    rotation: '-1deg',
   },
+  // {
+  //   id: 'mindspace',
+  //   title: 'MindSpace',
+  //   category: 'UX/UI Design • Mobile App',
+  //   description: 'A mental health companion app designed to help college students build mindfulness routines and cope with academic stress.',
+  //   tags: ['Mobile UX', 'User Research', 'Mental Health'],
+  //   colorClass: 'project-card-pink',
+  //   stickerText: 'Mindfulness',
+  //   rotation: '-1.5deg',
+  //   metrics: {
+  //     label: 'Engagement',
+  //     value: '+42% Daily Active Users',
+  //     detail: 'Measured over a 3-month pilot study.'
+  //   }
+  // },
   {
-    id: 'reloop',
-    title: 'ReLoop',
-    category: 'UX Redesign • Web App',
-    description: 'A circular fashion thrift marketplace redesign, focusing on streamlining listing flows and optimizing checkout conversion rates.',
-    tags: ['Web Design', 'Checkout Optimization', 'Sustainability'],
+    id: 'aquapay',
+    title: 'Aqua Pay',
+    category: 'UX Design • Mobile App',
+    description: 'Aqua Pay a mobile payment app with modern and aesthetic UI design.',
+    tags: ['Mobile UX', 'Checkout Optimization', 'Professional'],
     colorClass: 'project-card-yellow',
-    stickerText: 'Eco-Fashion',
+    stickerText: 'Fintech',
     rotation: '1.2deg',
-    metrics: {
-      label: 'Conversion',
-      value: '+28% Checkout Rate',
-      detail: 'Reduced cart abandonment rate by 15%.'
-    }
   },
   {
-    id: 'fineasy',
-    title: 'FinEasy',
-    category: 'Product Design • FinTech',
-    description: 'A gamified micro-investing and financial literacy platform making stock investments intuitive and accessible for Gen-Z beginners.',
-    tags: ['FinTech', 'Data Visualization', 'Gamification'],
+    id: 'tinysteps',
+    title: 'Tiny Steps',
+    category: 'Product Design • Store',
+    description: 'An E-commerce store for kids footwear.',
+    tags: ['Responsive', 'E-commerce', 'Elegant'],
     colorClass: 'project-card-blue',
-    stickerText: 'Investing',
+    stickerText: 'Store',
     rotation: '-0.8deg',
-    metrics: {
-      label: 'Success Rate',
-      value: '94% Task Completion',
-      detail: 'Tested across 50 novice investors.'
-    }
-  }
+  },
+  {
+    id: 'amox',
+    title: 'Amox',
+    category: 'Product Design • Tool',
+    description: 'Amox - a team task management tool.',
+    tags: ['Responsive', 'E-commerce', 'Elegant'],
+    colorClass: 'project-card-blue',
+    stickerText: 'Store',
+    rotation: '-0.8deg',
+  },
+
 ];
 
 const Projects = () => {
@@ -107,7 +118,7 @@ const Projects = () => {
               </div>
 
               {/* Recruiter Metrics Sticky Overlay */}
-              {isRecruiterMode && (
+              {isRecruiterMode && project.metrics && (
                 <div className="recruiter-metrics-box animate-float">
                   <div className="recruiter-metrics-header">
                     <BarChart3 className="w-3.5 h-3.5 text-rose-500" />
@@ -121,7 +132,7 @@ const Projects = () => {
               {/* Actions: View Case Study */}
               <div className="project-footer">
                 <Link to={`/project/${project.id}`} className="btn-scrapbook btn-scrapbook-blue">
-                  Read Case Study
+                  View Details
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 

@@ -4,7 +4,7 @@ import characterImg from '../assets/character.png';
 import { Check, User, Calendar, MapPin, GraduationCap, Laptop } from 'lucide-react';
 
 const SKILLS = [
-  { name: 'Figma & FigJam', color: '#fbeae6' },
+  { name: 'Figma', color: '#fbeae6' },
   { name: 'Canva', color: '#fef5df' },
   { name: 'User Research and Usability Testing', color: '#e2edf8' },
   { name: 'Empathy', color: '#e5d1c5' },
@@ -49,11 +49,11 @@ const About = () => {
                   </li>
                   <li>
                     <MapPin className="w-4 h-4 text-rose-500" />
-                    <span><strong>Location:</strong> Delhi / Remote</span>
+                    <span><strong>Location:</strong> Indore / Remote</span>
                   </li>
                   <li>
                     <GraduationCap className="w-4 h-4 text-amber-500" />
-                    <span><strong>Education:</strong> B.Des in UI/UX</span>
+                    <span><strong>Education:</strong> B.Tech in CSE</span>
                   </li>
                   <li>
                     <Laptop className="w-4 h-4 text-emerald-500" />
