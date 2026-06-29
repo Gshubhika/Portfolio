@@ -5,12 +5,13 @@ import { Check, User, Calendar, MapPin, GraduationCap, Laptop } from 'lucide-rea
 
 const SKILLS = [
   { name: 'Figma & FigJam', color: '#fbeae6' },
-  { name: 'Wireframing', color: '#fef5df' },
-  { name: 'Interactive Prototyping', color: '#e2edf8' },
-  { name: 'Usability Testing', color: '#e5d1c5' },
-  { name: 'Information Architecture', color: '#dce7f3' },
-  { name: 'React, HTML & CSS', color: '#fbeae6' }
+  { name: 'Canva', color: '#fef5df' },
+  { name: 'User Research and Usability Testing', color: '#e2edf8' },
+  { name: 'Empathy', color: '#e5d1c5' },
+  { name: 'Communication', color: '#dce7f3' },
+  { name: 'Design Thinking', color: '#fbeae6' }
 ];
+
 
 const About = () => {
   const { isRecruiterMode } = useRecruiter();
