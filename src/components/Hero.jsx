@@ -156,7 +156,7 @@ const Hero = () => {
         <div className="hero-actions">
           <>
             <a
-              href="/Shubhika Resume.pdf"
+              href={`${import.meta.env.BASE_URL}Shubhika_Resume.pdf`}
               download
               className="btn-scrapbook btn-scrapbook-blue transition-recruiter animate-wiggle"
             >
