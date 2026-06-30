@@ -70,20 +70,16 @@ const Connect = () => {
         return;
       }
 
-      const response = await fetch("YOUR_WEB_APP_URL", {
+      const response = await fetch("https://script.google.com/macros/s/AKfycbyhLQGQyuJgMd-EvGpV81PNIJ6RHP1aH7l_rI1Ke6hxOuH0pRAtfy8iy7Cuo5ixNakXsg/exec", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
+        mode: "no-cors",
         body: JSON.stringify(data),
       });
 
-      const result = await response.json();
-
-      if (result.success) {
         setIsSubmitted(true);
-        // alert("Submitted!");
-      }
 
       setFormData({
         name: "",
