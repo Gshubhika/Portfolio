@@ -13,6 +13,7 @@ const PROJECTS_DATA = [
     colorClass: 'project-card-pink',
     stickerText: 'Shoping',
     rotation: '-1deg',
+    url: 'https://www.figma.com/design/1sRDFxlHl3SfktrYTF4c1p/wishhive--landing-page-and-1-pg?node-id=6-38&p=f&t=9PbgmqlE5gJqYdcH-0',
   },
   // {
   //   id: 'mindspace',
@@ -38,6 +39,7 @@ const PROJECTS_DATA = [
     colorClass: 'project-card-yellow',
     stickerText: 'Fintech',
     rotation: '1.2deg',
+    url: 'https://www.figma.com/design/1sRDFxlHl3SfktrYTF4c1p/wishhive--landing-page-and-1-pg?node-id=0-1&p=f&t=nLHHHQHmN4g9Ldm0-0',
   },
   {
     id: 'tinysteps',
@@ -48,6 +50,7 @@ const PROJECTS_DATA = [
     colorClass: 'project-card-blue',
     stickerText: 'Store',
     rotation: '-0.8deg',
+    url: 'https://www.figma.com/design/XBOoEOuBKuStDN9QbVI7kb/portfolio---squid---tiny-stepss?node-id=20-2&p=f&t=vEl2jj518V87mprj-0',
   },
   {
     id: 'amox',
@@ -58,12 +61,17 @@ const PROJECTS_DATA = [
     colorClass: 'project-card-blue',
     stickerText: 'Store',
     rotation: '-0.8deg',
+    url: 'https://www.figma.com/design/eiNwC2HuIYV8261qXcfCDO/hack-Aura--Amdox?node-id=447-35',
   },
 
 ];
 
 const Projects = () => {
   const { isRecruiterMode } = useRecruiter();
+
+  const visit = (url) => {
+    window.open(url, '_blank');
+  }
 
   return (
     <section id="work" className="projects-section">
@@ -131,10 +139,10 @@ const Projects = () => {
 
               {/* Actions: View Case Study */}
               <div className="project-footer">
-                <Link to={`/project/${project.id}`} className="btn-scrapbook btn-scrapbook-blue">
-                  View Details
+                <a onClick={() => visit(project.url)} className="btn-scrapbook btn-scrapbook-blue">
+                  View
                   <ArrowRight className="w-4 h-4" />
-                </Link>
+                </a>
                 
                 {/* Decorative sticker on the card */}
                 {!isRecruiterMode && (

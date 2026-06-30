@@ -4,7 +4,7 @@ import { useRecruiter } from '../context/RecruiterContext';
 import { ArrowLeft, BookOpen, Compass, CheckCircle, Smartphone, Globe, Shield, RefreshCw } from 'lucide-react';
 
 const CASE_STUDIES = {
-  mindspace: {
+  wishhive: {
     title: 'MindSpace Mindfulness Companion',
     subtitle: 'Helping Gen-Z students build mental resilience one breath at a time.',
     role: 'Lead UI/UX Designer & Researcher',

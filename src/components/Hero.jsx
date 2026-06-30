@@ -110,7 +110,7 @@ const Hero = () => {
                 onClick={() => scrollToSection('work')}
                 className="btn-scrapbook transition-recruiter"
               >
-                Explore Case Studies
+                Explore Projects
                 <ChevronRight className="w-5 h-5" />
               </button>
             </>
