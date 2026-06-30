@@ -10,7 +10,7 @@ const Navbar = () => {
 
   const handleNavClick = (sectionId) => {
     if (location.pathname !== '/') {
-      navigate(`/#${sectionId}`);
+      navigate(`#${sectionId}`);
     } else {
       const element = document.getElementById(sectionId);
       if (element) {

@@ -1,14 +1,14 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { RecruiterProvider } from './context/RecruiterContext';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import ProjectDetail from './pages/ProjectDetail';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { RecruiterProvider } from "./context/RecruiterContext";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import ProjectDetail from "./pages/ProjectDetail";
 
 function App() {
   return (
     <RecruiterProvider>
-      <Router>
+      <Router basename="/Portfolio">
         <div className="app-container">
           <Navbar />
           <Routes>
