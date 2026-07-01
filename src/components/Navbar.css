@@ -1,0 +1,144 @@
+/* Navbar Styling */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  background-color: transparent;
+  color: var(--color-ink);
+  transition: var(--transition-smooth);
+}
+
+.navbar-recruiter-theme {
+  background-color: transparent;
+  color: var(--color-ink);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+}
+
+.logo-outline-adjust {
+  font-size: 1.2rem;
+  margin-left: 0.25rem;
+  -webkit-text-stroke: 1.5px var(--color-ink);
+}
+
+.navbar-recruiter-theme .logo-outline-adjust {
+  -webkit-text-stroke: 1.5px #ffffff;
+}
+
+.logo-sparkle {
+  width: 1rem;
+  height: 1rem;
+  color: var(--color-ink);
+  margin-left: 0.25rem;
+}
+
+.navbar-recruiter-theme .logo-sparkle {
+  color: var(--color-paper-yellow);
+}
+
+.navbar-controls {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.navbar-link-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 500;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  color: inherit;
+  transition: all 0.2s ease;
+}
+
+.navbar-link-btn:hover {
+  background-color: rgba(30, 53, 94, 0.08);
+}
+
+.navbar-icon {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
+.navbar-recruiter-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(30, 53, 94, 0.05);
+  padding: 0.25rem 0.5rem 0.25rem 0.75rem;
+  border-radius: 30px;
+  border: 1.5px solid var(--color-ink);
+}
+
+.navbar-recruiter-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  user-select: none;
+}
+
+/* Custom Toggle Switch for Recruiter Mode */
+.toggle-switch {
+  position: relative;
+  width: 50px;
+  height: 26px;
+  background-color: var(--color-paper-blue);
+  border-radius: 13px;
+  padding: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: 1.5px solid var(--color-ink);
+}
+
+.toggle-switch-active {
+  background-color: var(--color-ink);
+}
+
+.toggle-knob {
+  width: 18px;
+  height: 18px;
+  background-color: var(--color-ink);
+  border-radius: 50%;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.toggle-switch-active .toggle-knob {
+  transform: translateX(24px);
+  background-color: var(--color-paper-yellow);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 1.5rem;
+  }
+  .navbar-menu {
+    display: none;
+  }
+}

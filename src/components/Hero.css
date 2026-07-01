@@ -1,0 +1,325 @@
+/* Hero Section Styling */
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  margin-top: -80px;
+  padding: 5rem 1.5rem 3rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  /* Background image restricted to hero section only */
+  background-image: url('../assets/grid-bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-container {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-subheading-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-slogan {
+  font-family: var(--font-hand);
+  font-size: 1.6rem;
+  color: var(--color-ink-light);
+  max-width: 550px;
+  line-height: 1.2;
+  transition: var(--transition-smooth);
+}
+
+.recruiter-pitch-active {
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  line-height: 1.5;
+  background-color: var(--color-paper-pink);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  border: 1px dashed var(--color-ink);
+}
+
+.open-to-work-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 30px;
+  border: 1.5px solid var(--color-ink);
+  background-color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 2px 2px 0 var(--color-ink);
+}
+
+.open-to-work-badge .dot {
+  color: var(--color-open-work);
+  position: absolute;
+}
+
+.open-to-work-badge .dot-static {
+  color: var(--color-open-work);
+}
+
+.hero-title {
+  text-align: center;
+  line-height: 1.05;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inspired-title {
+  font-size: 9rem;
+}
+
+.title-serif {
+  font-family: var(--font-serif);
+  font-size: 4.8rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .title-bubble, .title-serif {
+    font-size: 3rem;
+  }
+}
+
+/* Collage Area (Title + Transparent Centered Text + Character Overlap) */
+.collage-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  min-height: 380px;
+  margin: 2.5rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.collage-content-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  right: 120px;
+  bottom: 80px;
+  width: 100%;
+  margin-bottom: 80px;
+  max-width: 540px;
+  z-index: 2;
+  text-align: center;
+}
+
+.post-it-note {
+  background-color: transparent;
+  width: 100%;
+  min-height: auto;
+  padding: 0.5rem;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  transform: none;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+}
+
+.post-it-recruiter {
+  background-color: transparent;
+  transform: none;
+}
+
+.post-it-text {
+  font-family: var(--font-serif);
+  font-size: 1.55rem;
+  line-height: 1.4;
+  color: var(--color-ink);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.highlight-under {
+  border-bottom: 3px double var(--color-ink);
+  padding-bottom: 2px;
+}
+
+.recruiter-pitch-content {
+  text-align: center;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.recruiter-pitch-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-serif);
+}
+
+.recruiter-pitch-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  color: var(--color-ink-light);
+}
+
+.metrics-quick-list {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.metric-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  background-color: #ffffff;
+  border: 1.5px solid var(--color-ink);
+  box-shadow: 2px 2px 0 var(--color-ink);
+}
+
+.character-wrapper {
+  position: absolute;
+  left: 650px;
+  bottom: -100px;
+  width: 600px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.character-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .collage-wrapper {
+    min-height: 480px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .post-it-note {
+    width: 90%;
+    min-height: 200px;
+    padding: 1.8rem;
+  }
+  .character-wrapper {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    width: 280px;
+    margin-top: -30px;
+  }
+}
+
+/* Stickers on Hero */
+.coffee-sticker {
+  position: absolute;
+  left: -200px;
+  top: -50px;
+  width: 130px;
+  transform: rotate(-12deg);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.coffee-sticker img {
+  width: 100%;
+}
+
+.coffee-sticker .sticker-label {
+  font-family: var(--font-hand);
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-top: 0.1rem;
+}
+
+.paperclip-container {
+  position: absolute;
+  left: 60px;
+  top: -24px;
+  z-index: 10;
+  transform: rotate(20deg);
+}
+
+.paperclip-container svg path {
+  stroke: var(--color-ink);
+}
+
+/* Doodles */
+.doodle {
+  position: absolute;
+  pointer-events: none;
+}
+
+.doodle-star-pink {
+  top: 15%;
+  left: 10%;
+  font-size: 2.5rem;
+  color: var(--color-paper-pink);
+  text-shadow: 1px 1px 0 var(--color-ink);
+}
+
+.doodle-star-tan {
+  top: 22%;
+  right: 8%;
+  font-size: 3rem;
+  color: var(--color-accent-tan);
+  text-shadow: 1px 1px 0 var(--color-ink);
+}
+
+.doodle-wave {
+  bottom: 8%;
+  left: 8%;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center;
+  margin-top: 3rem;
+  z-index: 10;
+}
+
+@media (max-width: 480px) {
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .hero-actions a, .hero-actions button {
+    width: 80%;
+    justify-content: center;
+  }
+}

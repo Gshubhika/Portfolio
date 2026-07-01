@@ -1,7 +1,9 @@
 import React from "react";
 import { useRecruiter } from "../context/RecruiterContext";
 import characterImg from "../assets/character.png";
+import coffee from "../assets/coffee.png";
 import { FileDown, ChevronRight, Award, Compass, Heart } from "lucide-react";
+import "./Hero.css";
 
 const Hero = () => {
   const { isRecruiterMode } = useRecruiter();
@@ -36,70 +38,22 @@ const Hero = () => {
         {/* The Main Collage Area aligning over the background blue strip */}
         <div className="collage-wrapper">
           {/* Coffee Cup Sticker */}
-          <div className="coffee-sticker animate-float-reverse">
-            <svg
-              width="40"
-              height="40"
-              viewBox="0 0 40 40"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="20"
-                cy="20"
-                r="18"
-                fill="var(--color-paper-pink)"
-                stroke="var(--color-ink)"
-                strokeWidth="2"
-              />
-              <path
-                d="M12 25C15 25 15 29 20 29C25 29 25 25 28 25"
-                stroke="var(--color-ink)"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
-              <path
-                d="M14 18V21C14 24 16 26 19 26H21C24 26 26 24 26 21V18H14Z"
-                fill="var(--color-ink)"
-                stroke="var(--color-ink)"
-                strokeWidth="2"
-              />
-              <path
-                d="M26 19H28C29 19 30 20 30 21C30 22 29 23 28 23H26"
-                stroke="var(--color-ink)"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
-              <path
-                d="M17 12C17 12 18 10 17 9"
-                stroke="var(--color-ink)"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-              />
-              <path
-                d="M20 13C20 13 21 11 20 10"
-                stroke="var(--color-ink)"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-              />
-              <path
-                d="M23 12C23 12 24 10 23 9"
-                stroke="var(--color-ink)"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-              />
-            </svg>
-            <div className="sticker-label font-hand">Coffee</div>
+          <div className="coffee-sticker">
+            <img
+              src={coffee}
+              alt="Coffee Cup"
+              className="animate-float-reverse"
+            />
           </div>
 
           {/* Centered Content sitting exactly on top of the background blue strip */}
           <div className="collage-content-center">
             {/* Big Creative Headline */}
             <h1 className="hero-title">
-              <span className="bubble-outline-white title-bubble">
-                Inspired
+              <span className="rubik-puddles-font inspired-title">
+                {"‎ ‎ ‎ "}Inspired
               </span>
-              <span className="font-serif title-serif"> by Curiosity</span>
+              <span className="font-serif title-serif"> <span className="italianno-font">by</span> <span className="rubik-puddles-font">Curiosity</span> </span>
             </h1>
 
             {/* Introduction Text Block */}
@@ -108,10 +62,8 @@ const Hero = () => {
             >
               {!isRecruiterMode ? (
                 <p className="post-it-text font-serif text-center">
-                  Hi, I'm{" "}
-                  <span className="highlight-under">Shubhika Gupta</span>—a
-                  designer driven by creativity, curiosity, and a passion for
-                  great user experiences.
+                  Hi, I'm Shubhika Gupta—a designer driven by creativity,
+                  curiosity, and a passion for great user experiences.
                 </p>
               ) : (
                 <div className="recruiter-pitch-content">

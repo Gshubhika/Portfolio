@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useRecruiter } from '../context/RecruiterContext';
 import { Sparkles, User, Briefcase, FileText, Mail } from 'lucide-react';
+import './Navbar.css';
 
 const Navbar = () => {
   const { isRecruiterMode, toggleRecruiterMode } = useRecruiter();
@@ -42,7 +43,7 @@ const Navbar = () => {
             className="navbar-link-btn"
           >
             <Mail className="navbar-icon" />
-            ✦ Let's Connect
+            Let's Connect
           </button>
           <button 
             onClick={() => handleNavClick('work')} 
@@ -60,7 +61,7 @@ const Navbar = () => {
             className="navbar-link-btn"
           >
             <FileText className="navbar-icon" />
-            ✦ Resume
+            Resume
           </a>
           <button 
             onClick={() => handleNavClick('about')} 

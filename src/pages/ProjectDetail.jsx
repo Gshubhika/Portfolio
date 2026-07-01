@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { useRecruiter } from '../context/RecruiterContext';
 import { ArrowLeft, BookOpen, Compass, CheckCircle, Smartphone, Globe, Shield, RefreshCw } from 'lucide-react';
+import './ProjectDetail.css';
 
 const CASE_STUDIES = {
   wishhive: {

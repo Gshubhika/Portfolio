@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useRecruiter } from '../context/RecruiterContext';
 import { ArrowRight, BarChart3, TrendingUp, Sparkles } from 'lucide-react';
+import './Projects.css';
 
 const PROJECTS_DATA = [
   {
@@ -143,14 +144,6 @@ const Projects = () => {
                   View
                   <ArrowRight className="w-4 h-4" />
                 </a>
-                
-                {/* Decorative sticker on the card */}
-                {!isRecruiterMode && (
-                  <div className="project-sticker font-hand">
-                    <Sparkles className="w-3 h-3 text-amber-500 inline-block mr-1" />
-                    {project.stickerText}
-                  </div>
-                )}
               </div>
             </div>
           ))}

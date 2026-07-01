@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Send, Award, Mail, CheckCircle } from "lucide-react";
+import './Connect.css';
 
 const LinkedinIcon = (props) => (
   <svg

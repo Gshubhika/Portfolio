@@ -1,0 +1,154 @@
+/* Connect Section Styling */
+.connect-section {
+  position: relative;
+  padding: 6rem 0;
+  background-color: var(--color-paper-light);
+}
+
+.connect-header-wrapper {
+  text-align: center;
+  margin-bottom: 4rem;
+  max-width: 500px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.connect-body-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.connect-letter-form {
+  padding: 3rem 4rem;
+  text-align: left;
+  transform: rotate(-0.5deg);
+}
+
+.letter-sentence-structure {
+  font-size: 1.5rem;
+  line-height: 2.2;
+  color: var(--color-ink);
+}
+
+.letter-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.connect-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  text-align: left;
+}
+
+.sidebar-heading {
+  font-size: 1.6rem;
+  border-bottom: 2px solid var(--color-ink);
+  padding-bottom: 0.25rem;
+  display: inline-block;
+}
+
+.social-stickers-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.social-sticker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 6px;
+  border: 1.5px solid var(--color-ink);
+  box-shadow: 4px 4px 0 var(--color-ink);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  background-color: white;
+}
+
+.linkedin-sticker {
+  background-color: var(--color-paper-blue);
+  transform: rotate(-2deg);
+}
+
+.dribbble-sticker {
+  background-color: var(--color-paper-pink);
+  transform: rotate(3deg);
+}
+
+.behance-sticker {
+  background-color: var(--color-paper-yellow);
+  transform: rotate(-1.5deg);
+}
+
+.mail-sticker {
+  background-color: var(--color-accent-peach);
+  transform: rotate(2deg);
+}
+
+.social-sticker:hover {
+  transform: scale(1.08) rotate(0deg) !important;
+  box-shadow: 5px 5px 0 var(--color-ink);
+  background-color: #ffffff !important;
+}
+
+.scrapbook-disclaimer {
+  font-size: 1.05rem;
+  text-align: center;
+  color: var(--color-ink-light);
+  margin-top: 1rem;
+  line-height: 1.4;
+}
+
+/* Styled Inputs for handwritten letter form */
+.hand-input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px dashed var(--color-ink-light);
+  font-family: var(--font-hand);
+  font-size: 1.4rem;
+  color: var(--color-ink);
+  padding: 0 5px;
+  outline: none;
+  transition: border-bottom-color 0.3s;
+}
+
+.hand-input:focus {
+  border-bottom-color: var(--color-open-work);
+}
+
+.hand-textarea {
+  background: transparent;
+  border: none;
+  line-height: 28px;
+  font-family: var(--font-hand);
+  font-size: 1.4rem;
+  color: var(--color-ink);
+  outline: none;
+  width: 100%;
+  resize: none;
+  margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+  .connect-body-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .connect-letter-form {
+    padding: 2rem;
+  }
+  .letter-sentence-structure {
+    font-size: 1.3rem;
+    line-height: 2;
+  }
+}

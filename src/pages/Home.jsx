@@ -4,6 +4,7 @@ import Hero from '../components/Hero';
 import Projects from '../components/Projects';
 import About from '../components/About';
 import Connect from '../components/Connect';
+import Head from '../components/Head';
 
 const Home = () => {
   const { hash } = useLocation();
@@ -24,7 +25,8 @@ const Home = () => {
 
   return (
     <main style={{ flexGrow: 1 }}>
-      <Hero />
+      {/* <Hero /> */}
+      <Head />
       <Projects />
       <About />
       <Connect />

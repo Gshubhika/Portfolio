@@ -1,0 +1,164 @@
+/* Projects Section Styling */
+.projects-section {
+  position: relative;
+  background-color: #ffffff;
+  padding: 6rem 0;
+  border-bottom: 2px solid var(--color-ink);
+}
+
+.projects-header-wrapper {
+  text-align: center;
+  margin: 3.5rem auto;
+  max-width: 500px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.project-card {
+  position: relative;
+  padding: 2.5rem 2rem 2rem 2rem;
+  border-radius: 6px;
+  border: 2px solid var(--color-ink);
+  box-shadow: 4px 4px 0px var(--color-ink);
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.project-card-pink {
+  background-color: var(--color-paper-pink);
+}
+
+.project-card-yellow {
+  background-color: var(--color-paper-yellow);
+}
+
+.project-card-blue {
+  background-color: var(--color-paper-blue);
+}
+
+.project-clip {
+  position: absolute;
+  left: 20px;
+  top: -16px;
+  z-index: 10;
+  transform: rotate(-10deg);
+}
+
+.project-category {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-ink-light);
+  margin-bottom: 0.5rem;
+}
+
+.project-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.project-description {
+  font-size: 0.95rem;
+  color: var(--color-ink);
+  line-height: 1.6;
+  flex-grow: 1;
+  margin-bottom: 1.75rem;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.project-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.project-sticker {
+  background-color: #ffffff;
+  border: 1.5px solid var(--color-ink);
+  padding: 0.25rem 0.6rem;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  transform: rotate(5deg);
+  box-shadow: 2px 2px 0 var(--color-ink);
+  user-select: none;
+}
+
+/* Recruiter Metrics Sticky Overlay */
+.recruiter-metrics-box {
+  position: absolute;
+  right: -12px;
+  top: -24px;
+  background-color: #ffffff;
+  border: 2px solid var(--color-ink);
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  box-shadow: 5px 5px 0 var(--color-ink);
+  z-index: 15;
+  max-width: 190px;
+  transform: rotate(4deg);
+  animation: float 6.5s ease-in-out infinite;
+}
+
+.recruiter-metrics-header {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-ink-light);
+  border-bottom: 1px dashed rgba(30, 53, 94, 0.2);
+  padding-bottom: 4px;
+  margin-bottom: 6px;
+}
+
+.recruiter-metrics-value {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--color-open-work);
+  line-height: 1.2;
+}
+
+.recruiter-metrics-desc {
+  font-size: 0.65rem;
+  color: var(--color-ink-light);
+  line-height: 1.3;
+  margin-top: 2px;
+}
+
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 4rem 0;
+  }
+  .recruiter-metrics-box {
+    position: relative;
+    right: 0;
+    top: 0;
+    margin-top: -10px;
+    margin-bottom: 1.5rem;
+    max-width: 100%;
+    transform: none;
+    animation: none;
+    box-shadow: 3px 3px 0 var(--color-ink);
+  }
+}

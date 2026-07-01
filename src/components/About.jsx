@@ -2,6 +2,7 @@ import React from 'react';
 import { useRecruiter } from '../context/RecruiterContext';
 import characterImg from '../assets/character.png';
 import { Check, User, Calendar, MapPin, GraduationCap, Laptop } from 'lucide-react';
+import './About.css';
 
 const SKILLS = [
   { name: 'Figma', color: '#fbeae6' },
