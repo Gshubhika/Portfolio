@@ -1,6 +1,7 @@
 import React from "react";
 import coffee from "../assets/coffee.png";
 import characterImg from "../assets/character.png";
+import polygon from "../assets/blue-polygon.png";
 import "./Head.css";
 
 const Head = () => {
@@ -21,6 +22,9 @@ const Head = () => {
         Open to Work <span className="dot">●</span>
       </div>
       <div className="head-content">
+        <div className="head-content-bg-wrapper">
+          <img src={polygon}/>
+        </div>
         <div className="head-title">
           <div className="subheading">
             <p>Every design is a puzzle, and every user is a clue</p>
