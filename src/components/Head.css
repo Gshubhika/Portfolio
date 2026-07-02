@@ -1,17 +1,3 @@
-#head {
-  width: "100%";
-  min-height: 100vh;
-  margin-top: -85px;
-  position: relative;
-  background-image: url("../assets/grid-bg.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 /* Stickers on Hero */
 .character-wrapper {
   position: absolute;
@@ -68,58 +54,289 @@
   }
 }
 
-.head-title {
-    /* border: 1px solid black; */
-    position: relative;
-    width: 100dvw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    top: -40px;
+#head {
+  width: 100%;
+  min-height: 100vh;
+  margin-top: -85px;
+  position: relative;
+  background-image: url("../assets/grid-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  /* padding: 2rem; */
+  box-sizing: border-box;
 }
 
+.head-content {
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1400px;
+}
+
+.head-title {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-start;
+  gap: clamp(0.5rem, 1.5vw, 1.5rem);
+  width: 100%;
+}
 .subheading {
-    position: absolute;
-    bottom: 180px;
-    right: 990px;
+  position: relative;
+  left: 11rem;
+  bottom: 0.5rem;
 }
 .subheading p {
-    font-size: 1.4rem;
+  font-weight: 300;
+  font-size: clamp(1.2rem, 1.4vw, 1.6rem);
+  margin: 0;
 }
 
 .title-top {
-    /* border: 1px sxolid black; */
-    position: absolute;
-    left: 500px;
-    top: -220px;
+  align-self: flex-start;
+  position: relative;
+  left: 16rem;
+  bottom: 2rem;
 }
 .title-top h1 {
-    font-size: 9.5rem;
+  font-size: clamp(2.8rem, 9vw, 9.5rem);
+  line-height: 1;
+  margin: 0;
 }
 
 .title-bottom {
-    /* border: 1px solid black; */
-    position: absolute;
-    top: -100px;
-    right: 940px;
+  align-self: flex-start;
+  position: relative;
+  left: 1rem;
+  bottom: 5rem;
 }
 .title-bottom h1 {
-    font-size: 8.5rem
-}
-.title-bottom h1 .by {
-    
-}
-.title-bottom h1 .curiosity {
-    
+  font-size: clamp(2.4rem, 8vw, 9rem);
+  line-height: 1;
+  margin: 0;
 }
 
 .title-para {
-    /* border: 1px solid black; */
-    position: absolute;
-    width: 25dvw;
-    top: 90px;
-    right: 1000px;
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+  bottom: 8rem;
+  left: 8rem;
 }
 .title-para p {
-    font-size: 1.2rem; 
+  font-size: clamp(0.9rem, 1.1vw, 1.2rem);
+  margin: 0;
+}
+
+/* Mobile First */
+@media (min-width: 0) {
+  .charater-wrapper {
+    display: none;
+  }
+  .coffee-sticker {
+    width: 2rem;
+    top: 25dvh;
+    left: 25dvw;
+  }
+  .open-to-work-sticker {
+    top: 25.5dvh;
+    right: 35dvw;
+  }
+  #head {
+    width: 100%;
+    height: auto;
+    background-position: right;
+  }
+  .head-content {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* gap: 1rem; */
+    padding: clamp(1rem, 30px, 3rem);
+  }
+  .subheading {
+    width: 70dvw;
+    inset: 0;
+    align-self: center;
+  }
+  .subheading p {
+    font-size: clamp(0.7rem, 15px, 1.2rem);
+  }
+  .title-top {
+    inset: 0;
+  }
+  .title-top h1 {
+    font-size: 4.7rem;
+  }
+  .title-bottom {
+    align-self: flex-end;
+    inset: 0;
+  }
+  .title-bottom h1 {
+    font-size: 3.5rem;
+  }
+  .title-para {
+    inset: 0;
+  }
+  .title-para p {
+    text-align: center;
+    font-size: 0.8rem;
+  }
+}
+
+/* Small phones */
+@media (min-width: 480px) {
+  .charater-wrapper {
+    display: none;
+  }
+  .coffee-sticker {
+    width: 4rem;
+    top: 25dvh;
+    left: 35dvw;
+  }
+  .open-to-work-sticker {
+    top: 26.5dvh;
+    right: 40dvw;
+    /* align-self: center; */
+  }
+  #head {
+    width: 100%;
+    height: auto;
+    background-position: right;
+  }
+  .head-content {
+    /* border: 1px solid red; */
+    display: flex;
+    width: 90dvw;
+    max-width: 500px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* gap: 1rem; */
+    /* padding: clamp(1rem, 30px, 3rem); */
+  }
+  .subheading {
+    inset: 0;
+    width: 80%;
+    align-self: center;
+  }
+  .subheading p {
+    font-size: clamp(0.7rem, 15px, 1.2rem);
+  }
+  .title-top {
+    inset: 0;
+  }
+  .title-top h1 {
+    font-size: clamp(4.7rem, 6rem, 7rem);
+  }
+  .title-bottom {
+    align-self: flex-end;
+    inset: 0;
+  }
+  .title-bottom h1 {
+    font-size: 3.5rem;
+  }
+  .title-para {
+    inset: 0;
+  }
+  .title-para p {
+    text-align: center;
+    font-size: 0.8rem;
+  }
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+  .charater-wrapper {
+    display: none;
+  }
+  .character-img { 
+    display: none
+  }
+  .coffee-sticker {
+    width: 4rem;
+    top: 15dvh;
+    left: 14dvw;
+  }
+  .open-to-work-sticker {
+    top: 15dvh;
+    right: 50dvw;
+    /* align-self: center; */
+  }
+  #head {
+    width: 100%;
+    height: auto;
+    background-position: right;
+  }
+  .head-content {
+    border: 1px solid red;
+    display: flex;
+    width: 90dvw;
+    max-width: 600px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .subheading {
+    inset: 0;
+    width: 80%;
+    align-self: center;
+  }
+  .subheading p {
+    font-size: clamp(0.7rem, 15px, 1.2rem);
+  }
+  .title-top {
+    inset: 0;
+  }
+  .title-top h1 {
+    font-size: clamp(4.7rem, 6rem, 7rem);
+  }
+  .title-bottom {
+    align-self: flex-start;
+    inset: 0;
+  }
+  .title-bottom h1 {
+    font-size: clamp(4.7rem, 6rem, 7rem);
+  }
+  .title-para {
+    inset: 0;
+  }
+  .title-para p {
+    text-align: center;
+    font-size: 0.8rem;
+  }
+}
+
+/* Small laptops */
+@media (min-width: 1024px) {
+  .charater-wrapper {
+    display: block;
+  }
+  .character-img { 
+    display: block;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1280px) {
+
+}
+
+/* Large desktop */
+@media (min-width: 1536px) {
+
+}
+
+/* Ultra-wide */
+@media (min-width: 1920px) {
+
 }

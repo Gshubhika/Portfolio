@@ -20,24 +20,26 @@ const Head = () => {
       <div className="open-to-work-sticker">
         Open to Work <span className="dot">●</span>
       </div>
-
-      <div className="head-title">
-        <div className="subheading">
-          <p>Every design is a puzzle, and every user is a clue</p>
-        </div>
-        <div className="title-top">
-          <h1 className="rubik-puddles-font">Inspired</h1>
-        </div>
-        <div className="title-bottom">
-          <h1>
-            <span className="by italianno-font">by</span> <span className="curiosity playfair-font">Curiosity</span>
-          </h1>
-        </div>
-        <div className="title-para">
-          <p>
-            Hi, I'm Shubhika Gupta—a designer driven by creativity, curiosity,
-            and a passion for great user experiences.
-          </p>
+      <div className="head-content">
+        <div className="head-title">
+          <div className="subheading">
+            <p>Every design is a puzzle, and every user is a clue</p>
+          </div>
+          <div className="title-top">
+            <h1 className="rubik-puddles-font">Inspired</h1>
+          </div>
+          <div className="title-bottom">
+            <h1>
+              <span className="by italianno-font">by</span>{" "}
+              <span className="curiosity playfair-font">Curiosity</span>
+            </h1>
+          </div>
+          <div className="title-para">
+            <p>
+              Hi, I'm Shubhika Gupta—a designer driven by creativity, curiosity,
+              and a passion for great user experiences.
+            </p>
+          </div>
         </div>
       </div>
     </section>
