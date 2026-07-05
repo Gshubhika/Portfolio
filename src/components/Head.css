@@ -6,9 +6,6 @@
 
   display: none;
 
-  left: 1000px;
-  bottom: 100px;
-  width: 600px;
 }
 
 .character-img {
@@ -25,8 +22,8 @@
   align-items: center;
   z-index: 10;
 
-  left: 2dvw;
-  top: 37dvh;
+  top: -0.5rem;
+  left: -0.5rem;
   width: 4rem;
 }
 .coffee-sticker img {
@@ -36,9 +33,10 @@
 .open-to-work-sticker {
   position: absolute;
 
-  top: 30dvh;
+  bottom: 32dvh;
   left: 50%;
   transform: translateX(-50%);
+  color: #586BBD;
 }
 .dot {
   animation: beep 1.2s infinite;
@@ -91,6 +89,7 @@
 .head-content-bg-wrapper {
   position: absolute;
   width: 90%;
+  z-index: 1;
 }
 .head-content-bg-wrapper img {
   width: 100%;
@@ -99,6 +98,7 @@
 }
 
 .head-title {
+  z-index: 2;
   display: flex;
   position: relative;
   flex-direction: column;
@@ -148,26 +148,15 @@
 }
 .title-para p {
   font-size: 0.5rem;
+  color: #586BBD;
 }
 
 /* Small phones */
 @media (min-width: 480px) {
-  /* Stickers on Hero */
-  .character-wrapper {
-    left: 1000px;
-    bottom: 100px;
-    width: 600px;
-  }
-
-  .character-img {
-    width: 100%;
-    height: auto;
-    display: none;
-  }
 
   .coffee-sticker {
-    left: clamp(30px, calc(50% - 210px), 300px);
-    top: 38dvh;
+    top: -0.5rem;
+    left: -0.5rem;
     width: 4rem;
   }
   .coffee-sticker img {
@@ -175,7 +164,7 @@
   }
 
   .open-to-work-sticker {
-    top: 30dvh;
+    bottom: 26dvh;
   }
 
   .head-content {
@@ -236,8 +225,8 @@
 /* Tablets */
 @media (min-width: 768px) {
   .coffee-sticker {
-    left: calc(50% - 300px);
-    top: 35dvh;
+    top: -0.2rem;
+    left: 0rem;
     width: 5rem;
   }
   .coffee-sticker img {
@@ -245,7 +234,7 @@
   }
 
   .open-to-work-sticker {
-    top: 30dvh;
+    bottom: 36dvh;
   }
 
   #head {
@@ -301,7 +290,7 @@
   .title-para {
     width: 70%;
     align-self: center;
-    bottom: 1.5rem;
+    bottom: 2rem;
   }
   .title-para p {
     font-size: clamp(0.7rem, 1dvw, 1.5rem);
@@ -309,31 +298,54 @@
 }
 /* Small laptops */
 @media (min-width: 1024px) {
+  .character-wrapper {
+    /* border: 1px solid red; */
+    left: 75%;
+    top: 2dvh;
+    width: 30dvw;
+    display: block;
+  }
+
+  .character-img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
   .coffee-sticker {
-    left: calc(50% - 300px);
-    top: 35dvh;
-    width: 5rem;
+    top: -0.5rem;
+    left: -0.5rem;
+    width: clamp(4rem, 7dvw, 7rem);
   }
   .coffee-sticker img {
     width: 100%;
   }
 
   .open-to-work-sticker {
-    top: 30dvh;
+    /* display: none; */
+    position: absolute;
+    left: calc(75% + 20dvw);
+    top: -2dvh;
+    /* transform: translateX(50%); */
+    width: max-content;
+    font-size: 1.1rem;
   }
 
   #head {
+    /* position: relative; */
     min-height: 100vh;
     margin-top: -85px;
   }
 
   .head-content {
+    /* border: 1px solid black; */
     width: 100%;
-    max-width: 600px;
+    margin-right: 6rem;
+    /* max-width: 300px; */
   }
 
   .head-content-bg-wrapper {
-    width: 100%;
+    /* border: 1px solid red; */
+    width: 45dvw;
   }
   .head-content-bg-wrapper img {
     width: 100%;
@@ -354,42 +366,96 @@
   }
 
   .title-top {
-    left: calc(50% - 15rem);
+    /* border: 1px solid red; */
+    left: calc(50% - 14rem);
+    bottom: 0.3rem;
   }
   .title-top h1 {
     /* font-size: 4.5rem; */
-    font-size: clamp(6.5rem, 12dvw, 6.6rem);
+    font-size: clamp(3rem, 8.5dvw, 9rem);
     line-height: 1;
   }
 
   .title-bottom {
-    align-self: flex-start;
-    left: 1rem;
-    bottom: 0.7rem;
+    position: relative;
+    /* border: 1px solid red; */
+    width: 45dvw;
+    align-self: center;
+    left: -1rem;
+    /* left: calc(2rem); */
+    /* transform: translateX(-100%); */
+    /* left: calc(50% - 20rem); */
+    bottom: 1.2rem;
   }
   .title-bottom h1 {
-    font-size: clamp(6.5rem, 12dvw, 6.6rem);
+    font-size: clamp(2rem, 7.5dvw, 7rem);
     line-height: 1;
   }
 
   .title-para {
-    width: 70%;
-    align-self: center;
-    bottom: 1.5rem;
+    /* border: 1px solid red; */
+    width: 60%;
+    /* align-self: flex-start; */
+    left: -2rem;
+    bottom: 2.4rem;
   }
   .title-para p {
-    font-size: clamp(0.7rem, 1dvw, 1.5rem);
+    /* text-align: center; */
+    font-size: clamp(0.8rem, 1dvw, 1.5rem);
   }
 }
 
 /* Desktop */
 @media (min-width: 1280px) {
+  .title-para {
+    width: 70%;
+  }
 }
 
 /* Large desktop */
 @media (min-width: 1536px) {
+  .title-para {
+    align-self: flex-start;
+    left: 1rem;
+    width: 80%;
+  }
 }
 
 /* Ultra-wide */
 @media (min-width: 1920px) {
+  .subheading {
+    left: -6.5rem;
+  }
+  .subheading p {
+    font-size: 1.2rem;
+  }
+  .open-to-work-sticker{
+    top: 0dvh;
+    left: calc(75% + 26dvw);
+  }
+  .character-wrapper {
+    /* border: 1px solid red; */
+    left: 85%;
+    top: 2dvh;
+    width: 30dvw;
+    display: block;
+  }
+  .title-top {
+    /* left: 6rem; */
+    /* bottom: 1rem; */
+  }
+  .title-top h1{
+    font-size: 8.5rem;
+  }
+  .title-bottom {
+    left: -2.8rem;
+    bottom: 3rem;
+  }
+  .title-bottom h1 {
+    font-size: 9rem;
+  }
+  .title-para {
+    bottom: 5rem;
+    left: -4rem;
+  }
 }

@@ -8,23 +8,29 @@ const Head = () => {
   return (
     <section id="head">
       {/* Sitting Girl Character (Right side, overlapping) */}
-      <div className="character-wrapper">
-        <img
-          src={characterImg}
-          alt="Shubhika Avatar"
-          className="character-img"
-        />
-      </div>
-      <div className="coffee-sticker">
-        <img src={coffee} alt="Coffee Cup" className="animate-float-reverse" />
-      </div>
-      <div className="open-to-work-sticker">
-        Open to Work <span className="dot">●</span>
-      </div>
       <div className="head-content">
         <div className="head-content-bg-wrapper">
-          <img src={polygon}/>
+          <div className="coffee-sticker">
+            <img
+              src={coffee}
+              alt="Coffee Cup"
+              className="animate-float-reverse"
+            />
+          </div>
+          <img src={polygon} />
         </div>
+
+        <div className="open-to-work-sticker">
+          Open to Work <span className="dot">●</span>
+        </div>
+        <div className="character-wrapper">
+          <img
+            src={characterImg}
+            alt="Shubhika Avatar"
+            className="character-img"
+          />
+        </div>
+
         <div className="head-title">
           <div className="subheading">
             <p>Every design is a puzzle, and every user is a clue</p>
