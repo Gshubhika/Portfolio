@@ -58,7 +58,7 @@ const PROJECTS_DATA = [
     title: 'Amox',
     category: 'Product Design • Tool',
     description: 'Amox - a team task management tool.',
-    tags: ['Responsive', 'E-commerce', 'Elegant'],
+    tags: ['Responsive', 'Web App', 'Elegant'],
     colorClass: 'project-card-blue',
     stickerText: 'Store',
     rotation: '-0.8deg',

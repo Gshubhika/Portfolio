@@ -9,14 +9,6 @@ export const RecruiterProvider = ({ children }) => {
     setIsRecruiterMode((prev) => !prev);
   };
 
-  // Optional: persist selection
-  useEffect(() => {
-    const savedMode = localStorage.getItem('recruiter_mode');
-    if (savedMode === 'true') {
-      setIsRecruiterMode(true);
-    }
-  }, []);
-
   const handleToggle = () => {
     const nextState = !isRecruiterMode;
     setIsRecruiterMode(nextState);

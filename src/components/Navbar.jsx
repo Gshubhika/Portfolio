@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useRecruiter } from "../context/RecruiterContext";
 import { Sparkles, User, Briefcase, FileText, Mail } from "lucide-react";
 import "./Navbar.css";
+import GreetingOverlay from "./GreetingOverlay";
 
 const Navbar = ({ onGreetClick }) => {
   const { isRecruiterMode, toggleRecruiterMode } = useRecruiter();
@@ -20,10 +21,16 @@ const Navbar = ({ onGreetClick }) => {
     }
   };
 
+  const [showGreeting, setShowGreeting] = useState(false);
+
   return (
     <nav
       className={`navbar ${isRecruiterMode ? "navbar-recruiter-theme" : ""}`}
     >
+      <GreetingOverlay
+        open={showGreeting}
+        onClose={() => setShowGreeting(false)}
+      />
       {/* Brand Logo
       <div 
         onClick={() => {
@@ -77,7 +84,13 @@ const Navbar = ({ onGreetClick }) => {
           <div
             onClick={() => {
               toggleRecruiterMode();
-              onGreetClick();
+              const nextMode = !isRecruiterMode;
+
+              toggleRecruiterMode();
+
+              if (nextMode) {
+                setShowGreeting(true);
+              }
             }}
             className={`toggle-switch ${isRecruiterMode ? "toggle-switch-active" : ""}`}
           >
