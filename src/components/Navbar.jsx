@@ -1,27 +1,29 @@
-import React from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
-import { useRecruiter } from '../context/RecruiterContext';
-import { Sparkles, User, Briefcase, FileText, Mail } from 'lucide-react';
-import './Navbar.css';
+import React from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import { useRecruiter } from "../context/RecruiterContext";
+import { Sparkles, User, Briefcase, FileText, Mail } from "lucide-react";
+import "./Navbar.css";
 
-const Navbar = ({onGreetClick}) => {
+const Navbar = ({ onGreetClick }) => {
   const { isRecruiterMode, toggleRecruiterMode } = useRecruiter();
   const navigate = useNavigate();
   const location = useLocation();
 
   const handleNavClick = (sectionId) => {
-    if (location.pathname !== '/') {
+    if (location.pathname !== "/") {
       navigate(`#${sectionId}`);
     } else {
       const element = document.getElementById(sectionId);
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        element.scrollIntoView({ behavior: "smooth" });
       }
     }
   };
 
   return (
-    <nav className={`navbar ${isRecruiterMode ? 'navbar-recruiter-theme' : ''}`}>
+    <nav
+      className={`navbar ${isRecruiterMode ? "navbar-recruiter-theme" : ""}`}
+    >
       {/* Brand Logo
       <div 
         onClick={() => {
@@ -38,33 +40,30 @@ const Navbar = ({onGreetClick}) => {
       {/* Nav Links */}
       <div className="navbar-controls">
         <div className="navbar-menu">
-          <button 
-            onClick={() => handleNavClick('connect')} 
+          <button
+            onClick={() => handleNavClick("connect")}
             className="navbar-link-btn"
           >
             <Mail className="navbar-icon" />
             Let's Connect
           </button>
-          <button 
-            onClick={() => handleNavClick('work')} 
+          <button
+            onClick={() => handleNavClick("work")}
             className="navbar-link-btn"
           >
             <Briefcase className="navbar-icon" />
             Work
           </button>
-          <a 
-            href="#resume" 
-            onClick={(e) => {
-              e.preventDefault();
-              handleNavClick('about'); // Scroll to About/Resume
-            }} 
+          <a
+            href={`${import.meta.env.BASE_URL}Shubhika_Resume.pdf`}
+            download
             className="navbar-link-btn"
           >
             <FileText className="navbar-icon" />
             Resume
           </a>
-          <button 
-            onClick={() => handleNavClick('about')} 
+          <button
+            onClick={() => handleNavClick("about")}
             className="navbar-link-btn"
           >
             <User className="navbar-icon" />
@@ -74,12 +73,13 @@ const Navbar = ({onGreetClick}) => {
 
         {/* Recruiter Switch */}
         <div className="navbar-recruiter-container">
-          <span className="navbar-recruiter-label">
-            Recruiter
-          </span>
-          <div 
-            onClick={() => {toggleRecruiterMode(); onGreetClick();}}
-            className={`toggle-switch ${isRecruiterMode ? 'toggle-switch-active' : ''}`}
+          <span className="navbar-recruiter-label">Recruiter</span>
+          <div
+            onClick={() => {
+              toggleRecruiterMode();
+              onGreetClick();
+            }}
+            className={`toggle-switch ${isRecruiterMode ? "toggle-switch-active" : ""}`}
           >
             <div className="toggle-knob"></div>
           </div>
