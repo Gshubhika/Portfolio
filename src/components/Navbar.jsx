@@ -4,7 +4,7 @@ import { useRecruiter } from '../context/RecruiterContext';
 import { Sparkles, User, Briefcase, FileText, Mail } from 'lucide-react';
 import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({onGreetClick}) => {
   const { isRecruiterMode, toggleRecruiterMode } = useRecruiter();
   const navigate = useNavigate();
   const location = useLocation();
@@ -78,7 +78,7 @@ const Navbar = () => {
             Recruiter
           </span>
           <div 
-            onClick={toggleRecruiterMode}
+            onClick={() => {toggleRecruiterMode(); onGreetClick();}}
             className={`toggle-switch ${isRecruiterMode ? 'toggle-switch-active' : ''}`}
           >
             <div className="toggle-knob"></div>

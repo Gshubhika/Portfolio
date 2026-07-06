@@ -99,8 +99,7 @@ const Connect = () => {
         <div className="connect-header-wrapper">
           <div className="washi-tape washi-tape-right"></div>
           <h2 className="section-title">
-            <span className="bubble-outline">Let's</span>{" "}
-            <span className="font-serif">Connect</span>
+            <span className="font-serif">Let's Connect</span>
           </h2>
           <p className="section-subtitle font-hand">
             Drop me a note, let's create something together!

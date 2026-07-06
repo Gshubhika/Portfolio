@@ -88,7 +88,7 @@ const Projects = () => {
         <div className="projects-header-wrapper">
           <div className="washi-tape washi-tape-left"></div>
           <h2 className="section-title">
-            <span className="bubble-outline">Selected</span> <span className="font-serif">Projects</span>
+            <span className="font-serif">Selected Projects</span>
           </h2>
           <p className="section-subtitle font-hand">
             Some design puzzles I have enjoyed solving
